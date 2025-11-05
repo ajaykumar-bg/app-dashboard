@@ -1,1 +1,2 @@
-export { default as Dashboard } from './Dashboard';
+export { default as Dashboard } from './components/Dashboard';
+export { DashboardProvider, useDashboard } from './context/DashboardContext';

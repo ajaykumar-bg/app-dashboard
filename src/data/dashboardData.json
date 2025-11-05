@@ -1,0 +1,90 @@
+{
+  "techDebt": {
+    "reductionPercentage": 29,
+    "region": "MENA+",
+    "objectDecommission": {
+      "completed": 1884,
+      "total": 6434,
+      "percentage": 29.2
+    },
+    "unusedObjectsDecommissioning": {
+      "percentage": 100,
+      "status": "Complete"
+    }
+  },
+  "appRat": {
+    "totalSavings": 140000,
+    "sapMobilePlatform": {
+      "maintenanceBase": 665000,
+      "yearlyMaintenance": 115000,
+      "percentageValue": 17.29
+    },
+    "sapCEPortal": {
+      "computeCost": 25000
+    }
+  },
+  "aiIndex": {
+    "adoptionRate": 6.32,
+    "hoursSaved": 2000,
+    "dollarsSaved": 400000,
+    "useCases": 3
+  },
+  "vulnerabilities": {
+    "customCode": {
+      "detected": 12004,
+      "remediated": 9983,
+      "remaining": 2021
+    },
+    "sapPortal": {
+      "total": 142,
+      "remediated": 142,
+      "remaining": 0
+    }
+  },
+  "serviceScopes": {
+    "ricefs": 0,
+    "fioriApps": 236,
+    "retrofits": 4300,
+    "liveCompare": {
+      "count": 6000,
+      "type": "Executions"
+    }
+  },
+  "sqlOptimization": {
+    "queries": {
+      "analyzed": 30,
+      "dispositioned": 3,
+      "inProgress": 5,
+      "optimized": 22
+    },
+    "performance": {
+      "memoryReduction": {
+        "value": 0,
+        "unit": "GB"
+      },
+      "executionTimeReduction": {
+        "value": 144000,
+        "unit": "Seconds"
+      }
+    }
+  },
+  "operationMetrics": {
+    "created": 13287,
+    "active": 779,
+    "closed": 13275
+  },
+  "productRoadmap": {
+    "items": [
+		{ "name": "SAP Portal", "year": "2025", "type": "Upgrade" },
+		
+		{ "name": "SSAM", "year": "2026", "type": "Upgrade" },
+		{ "name": "Live Compare", "year": "2026", "type": "Upgrade" },
+		{ "name": "Data Masking", "year": "2026", "type": "Upgrade" },
+
+		{ "name": "Solution Manager", "year": "2027", "type": "Re-Platform" },
+		{ "name": "SAP Portal", "year": "2027", "type": "Re-Platform" },
+		{ "name": "Work Manager", "year": "2027", "type": "Re-Platform" },
+		{ "name": "SAP Gateway/Fiori", "year": "2027", "type": "Re-Platform" }
+    ]
+  }
+}

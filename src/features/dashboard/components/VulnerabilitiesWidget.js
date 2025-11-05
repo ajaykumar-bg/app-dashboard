@@ -1,6 +1,8 @@
+'use client';
+
 import { Box, Paper, Typography, Grid } from '@mui/material';
 import { useDashboard } from '../context/DashboardContext';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 import { useMemo } from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
@@ -14,7 +16,7 @@ const chartSettings = {
 
 export const VulnerabilitiesWidget = () => {
   const { data } = useDashboard();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const { vulnerabilities } = data;
   const vulnerabilityData = useMemo(
@@ -23,7 +25,7 @@ export const VulnerabilitiesWidget = () => {
   );
 
   const handleClick = () => {
-    navigate('/vulnerability-details');
+    router.push('/vulnerability-details');
   };
 
   return (

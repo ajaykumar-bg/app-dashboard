@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '../shared/context/ThemeContext';
 import { UserProvider } from '../shared/context/UserContext';
+import { DashboardProvider } from '../features/dashboard';
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -23,8 +24,10 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <UserProvider>
-            <CssBaseline />
-            {children}
+            <DashboardProvider>
+              <CssBaseline />
+              {children}
+            </DashboardProvider>
           </UserProvider>
         </ThemeProvider>
       </body>

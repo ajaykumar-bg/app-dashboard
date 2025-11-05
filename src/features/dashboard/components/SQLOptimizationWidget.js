@@ -1,8 +1,10 @@
+'use client';
+
 import { Box, Divider, Grid, Paper, Typography } from '@mui/material';
 import { useDashboard } from '../context/DashboardContext';
 import { useMemo } from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 import { generateSQLQueryData } from '../../../common/utils/dataGenerator';
 
@@ -14,7 +16,7 @@ const donutSettings = {
 
 export const SQLOptimizationWidget = () => {
   const { data } = useDashboard();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const { sqlOptimization } = data;
 
@@ -24,7 +26,7 @@ export const SQLOptimizationWidget = () => {
   );
 
   const handleClick = () => {
-    navigate('/sql-analytics');
+    router.push('/sql-analytics');
   };
 
   return (

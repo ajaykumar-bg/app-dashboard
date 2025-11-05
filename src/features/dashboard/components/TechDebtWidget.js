@@ -1,5 +1,7 @@
+'use client';
+
 import { Paper, Typography, Box, CircularProgress } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { useDashboard } from '../context/DashboardContext';
 import {
   getColorFromColorPath,
@@ -8,7 +10,7 @@ import {
 import { useMemo } from 'react';
 
 export const TechDebtWidget = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const { data } = useDashboard();
 
   const { techDebt } = data;
@@ -20,7 +22,7 @@ export const TechDebtWidget = () => {
   }, [techDebt?.reductionPercentage]);
 
   const handleClick = () => {
-    navigate('/tech-debt-details');
+    router.push('/tech-debt-details');
   };
 
   return (

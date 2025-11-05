@@ -1,15 +1,17 @@
+'use client';
+
 import { Grid, Paper, Typography } from '@mui/material';
 import { useDashboard } from '../context/DashboardContext';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 export const AppRatWidget = () => {
   const { data } = useDashboard();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const { appRat } = data;
 
   const handleClick = () => {
-    navigate('/app-rat-details');
+    router.push('/app-rat-details');
   };
 
   return (
