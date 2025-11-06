@@ -10,8 +10,8 @@ import "@fontsource/roboto/700.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PowerBI Dashboard",
-  description: "PowerBI Dashboard using MUI and Next.js",
+  title: "NextJS Dashboard",
+  description: "NextJS Dashboard using MUI and Next.js",
 };
 
 export default function RootLayout({
